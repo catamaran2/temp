@@ -55,16 +55,20 @@
 
 <script>
     function myFunction() {
+        var consumption = document.getElementsByName("consumption")
         alert("The form was submitted");
         const response = {
             name: $("carName"),
-            consumption: $("consumption"),
+            consumption: consumption,
             color: $("color"),
             carManufacturer: $("carManufacturer"),
             avaiable:$("avaiable"),
             year: $("year"),
             horsepower:$("horsepower")
         }
+        console.log(response);
+        alert(response);
+
 
     }
 </script>
