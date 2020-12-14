@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<form method="post" action="addCar">
+<script type="text/javascript" src="js/carForm.js"></script>
+<form method="post" onsubmit="myFunction()">
     <table>
         <tr>
             <td>Name:</td>
-            <td><input type="text" name="name" required="required" autofocus/></td>
+            <td><input type="text" name="carName" required="required" autofocus /></td>
         </tr>
         <tr>
             <td>Consumption:</td>
@@ -17,7 +18,7 @@
         <tr>
             <td>Manufacturer:</td>
             <td>
-                <select name="manufacturer" required="required">
+                <select name="carManufacturer" required="required">
                     <option value="Toyota">Toyota</option>
                     <option value="Bugatti">Bugatti</option>
                     <option value="Ford">Ford</option>
@@ -47,9 +48,25 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="insert" value="Add Car"</td>
+            <td><input type="submit" name="insert" value="Add Car"/></td>
         </tr>
     </table>
 </form>
+
+<script>
+    function myFunction() {
+        alert("The form was submitted");
+        const response = {
+            name: $("carName"),
+            consumption: $("consumption"),
+            color: $("color"),
+            carManufacturer: $("carManufacturer"),
+            avaiable:$("avaiable"),
+            year: $("year"),
+            horsepower:$("horsepower")
+        }
+
+    }
+</script>
 
 </html>
